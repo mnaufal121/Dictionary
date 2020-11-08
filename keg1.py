@@ -4,19 +4,19 @@ epl = [{'klub': 'liverpool', 'posisi': 1, 'pelatih': 'klopp', 'gol': 17},
        {'klub': 'manutd', 'posisi': 15, 'pelatih': 'ole', 'gol': 9},
        {'klub': 'burnley', 'posisi': 20, 'pelatih': 'dyche', 'gol': 3}]
 
-# no1
+# no 1
 for team in epl:
     team.pop('klub')
     team.pop('pelatih')
     print(team)
 
-# no2
+# no 2
 for x in range(len(epl)):
     if epl[x] == epl[1]:
         epl[x].clear()
     print(epl[x])
 
-# no3
+# no 3
 for team in epl:
     print("Nama Tim :", team.get('klub'))
     print("Posisi Klasemen :", team.get('posisi'))
@@ -24,15 +24,19 @@ for team in epl:
     print("Jumlah Gol :", team.get('gol'))
     print('-------------------------')
 
-# no4,5,6
+# no 4 + 5 + 6
+# no 4
 newteam = {'klub': 'leicester', 'posisi': 2, 'pelatih': 'rodgers', 'gol': 17}
 epl.append(newteam)
+
+# no 5
 for team in epl:
     chg = input('Ubah value key 4: ')
     # team['gol'] = chg
     ngol = {'gol': chg}
     team.update(ngol)
 
+# no 6
 for team in epl:
     print("1. Nama Tim :", team.get('klub'))
     print("2. Posisi Klasemen :", team.get('posisi'))
@@ -41,7 +45,8 @@ for team in epl:
     print('-------------------------')
 
 
-# no7,8
+# no 7 + 8
+# no 7
 for x in range(len(epl)):
     if epl[x] == epl[0]:
         chg = input('ubah value key 2: ')
@@ -59,13 +64,14 @@ for x in range(len(epl)):
         epl[x].update(ncoc)
         # epl[x]['pelatih'] = chg
 
+# no 8
 for team in epl:
     print("1. Nama Tim :", team.get('klub'))
     print("2. Posisi Klasemen :", team.get('posisi'))
     print("3. Nama Pelatih :", team.get('pelatih'))
     print("4. Jumlah Gol :", team.get('gol'))
 
-# no9,10
+# no 9 + 10
 valkey2 = 0
 valkey4 = 0
 cc = []

@@ -4,9 +4,11 @@ std = [{'nama': 'Ahmad', 'jurusan': 'Informatika', 'semester': 2, 'angkatan': ''
        {'nama': 'Malik', 'jurusan': '', 'semester': 6, 'angkatan': 2018},
        {'nama': '', 'jurusan': 'Kehutanan', 'semester': '', 'angkatan': 2015}]
 
+# dictionary std masih belum terisi
 for s in std:
     print(s)
 
+# proses pengecekan data kosong + input user 
 for x in range(len(std)):
     for k, v in std[x].items():
         if std[x][k] == '':
@@ -45,5 +47,6 @@ for x in range(len(std)):
 #         smt = {'semester' : n2}
 #         std[x].update(smt)
 
+# dictionary std setelah terisi
 for s in std:
     print(s)
