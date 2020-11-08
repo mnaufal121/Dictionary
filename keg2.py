@@ -8,35 +8,42 @@ for s in std:
     print(s)
 
 for x in range(len(std)):
-    if std[x] == std[0]:
-        n = input('angkatan: ')
-        year = {'angkatan': n}
-        std[x].update(year)
-    elif std[x] == std[1]:
-        n = input('nama: ')
-        name = {'nama' : n}
-        std[x].update(name)
-        n2 = input('semester: ')
-        smt = {'semester' : n2}
-        std[x].update(smt)
-    elif std[x] == std[2]:
-        n = input('jurusan: ')
-        dpt = {'jurusan' : n}
-        std[x].update(dpt)
-        n2 = input('angkatan: ')
-        year = {'angkatan' : n2}
-        std[x].update(year)
-    elif std[x] == std[3]:
-        n = input('jurusan: ')
-        dpt = {'jurusan': n}
-        std[x].update(dpt)
-    elif std[x] == std[4]:
-        n = input('nama: ')
-        name = {'nama' : n}
-        std[x].update(name)
-        n2 = input('semester: ')
-        smt = {'semester' : n2}
-        std[x].update(smt)
+    for k, v in std[x].items():
+        if std[x][k] == '':
+            n = input('masukkan value ' + k + ':')
+            n1 = {k : n}
+            std[x].update(n1)
+
+# for x in range(len(std)):
+#     if std[x] == std[0]:
+#         n = input('angkatan: ')
+#         year = {'angkatan': n}
+#         std[x].update(year)
+#     elif std[x] == std[1]:
+#         n = input('nama: ')
+#         name = {'nama' : n}
+#         std[x].update(name)
+#         n2 = input('semester: ')
+#         smt = {'semester' : n2}
+#         std[x].update(smt)
+#     elif std[x] == std[2]:
+#         n = input('jurusan: ')
+#         dpt = {'jurusan' : n}
+#         std[x].update(dpt)
+#         n2 = input('angkatan: ')
+#         year = {'angkatan' : n2}
+#         std[x].update(year)
+#     elif std[x] == std[3]:
+#         n = input('jurusan: ')
+#         dpt = {'jurusan': n}
+#         std[x].update(dpt)
+#     elif std[x] == std[4]:
+#         n = input('nama: ')
+#         name = {'nama' : n}
+#         std[x].update(name)
+#         n2 = input('semester: ')
+#         smt = {'semester' : n2}
+#         std[x].update(smt)
 
 for s in std:
     print(s)

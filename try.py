@@ -1,31 +1,27 @@
-Dict = [{'barang': 'komputer', 'jumlah': 50, 'harga': '2000'},
-        {'barang': 'mouse', 'jumlah': 20, 'harga': '200'},
-        {'barang': 'keyboard', 'jumlah': 30, 'harga': '1200'}]
-
-# key = ['barang', 'jumlah', 'harga']
+Dict = [{'barang': 'komputer', 'jumlah': 50, 'harga': ''},
+        {'barang': 'mouse', 'jumlah': 20, 'harga': ''},
+        {'barang': '', 'jumlah': 30, 'harga': '1200'}]
 
 for x in range(len(Dict)):
-    for y in Dict[x]:
-        print(Dict[x][y])
-    # for y in range(len(Dict[x])):
-    #     print(Dict[y])
-# newD =  {'barang':'komputer', 'jumlah': 50, 'kualitas' : 'baru'}
-# for x in range(len(newD)):
-#     print(newD[x])
-# Dict2 = Dict.copy()
+    for k, v in Dict[x].items():
+        # print(Dict[x][k])
+        if Dict[x][k] == '':
+            n = input('masukkan value' + k + ':')
+            n1 = {k : n}
+            Dict[x].update(n1)
 
-# print ("Dict = ", Dict)
-# view = newD.fromkeys(newD)
-# print (view)
-# print (newD.keys())
-# print (newD.values())
-# print (newD.items())
+for s in Dict:
+    print(s)
 
-# Dict.clear()
-# print ("Dict2 = ", Dict2)
+# item = [{'barang': 'komputer', 'jumlah': 50, 'harga': ''},
+#         {'barang': 'mouse', 'jumlah': '', 'harga': '200'},
+#         {'barang': '', 'jumlah': 30, 'harga': ''}]
 
-# Dict = {'barang': 'komputer'}
-# chg = input('barang: ')
-# nDict = {'barang': chg}
-# Dict.update(nDict)
-# print(Dict)
+# for x in range(len(item)):
+#     for k in item[x]:
+#         if v == None:
+#             n = input('masukkan value key' + k + ': ')
+#             item[x][k] = n
+
+# for s in item:
+#     print(s)

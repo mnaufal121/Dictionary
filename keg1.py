@@ -22,6 +22,7 @@ for team in epl:
     print("Posisi Klasemen :", team.get('posisi'))
     print("Nama Pelatih :", team.get('pelatih'))
     print("Jumlah Gol :", team.get('gol'))
+    print('-------------------------')
 
 # no4,5,6
 newteam = {'klub': 'leicester', 'posisi': 2, 'pelatih': 'rodgers', 'gol': 17}
@@ -37,6 +38,8 @@ for team in epl:
     print("2. Posisi Klasemen :", team.get('posisi'))
     print("3. Nama Pelatih :", team.get('pelatih'))
     print("4. Jumlah Gol :", team.get('gol'))
+    print('-------------------------')
+
 
 # no7,8
 for x in range(len(epl)):
@@ -65,18 +68,15 @@ for team in epl:
 # no9,10
 valkey2 = 0
 valkey4 = 0
-clubs = []
-coachs = []
+cc = []
 
 for team in epl:
     valkey2 += team.get('posisi')
     valkey4 += team.get('gol')
     valkey1 = team.get('klub')
-    clubs.append(valkey1)
     valkey3 = team.get('pelatih')
-    coachs.append(valkey3)
+    cc.append(valkey1 + valkey3) 
 
 print('Total Nilai Posisi :', valkey2)
 print('Total Gol :', valkey4)
-print(clubs)
-print(coachs)
+print(cc)
