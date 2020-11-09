@@ -1,17 +1,31 @@
-Dict = [{'barang': 'komputer', 'jumlah': 50, 'harga': ''},
-        {'barang': 'mouse', 'jumlah': 20, 'harga': ''},
-        {'barang': '', 'jumlah': 30, 'harga': '1200'}]
+Dict = [{'barang': 'komputer', 'jumlah': 50, 'harga': 1200},
+        {'barang': 'mouse', 'jumlah': 20, 'harga': 3400},
+        {'barang': 'keyboard', 'jumlah': 30, 'harga': 2400}]
 
+# for x in range(len(Dict)):
+#     for k, v in Dict[x].items():
+#         # print(Dict[x][k])
+#         if Dict[x][k] == '':
+#             n = input('masukkan value' + k + ':')
+#             n1 = {k : n}
+#             Dict[x].update(n1)
+
+# for s in Dict:
+#     print(s)
+
+dd = []
 for x in range(len(Dict)):
     for k, v in Dict[x].items():
-        # print(Dict[x][k])
-        if Dict[x][k] == '':
-            n = input('masukkan value' + k + ':')
-            n1 = {k : n}
-            Dict[x].update(n1)
+        if k == 'barang' or k == 'harga':
+            data = dict([(k,v)])
+            dd.append(data)
 
-for s in Dict:
-    print(s)
+print(dd)
+
+# my_dict = dict([(1, 'sepatu'), (2, 'bola')])
+# print(my_dict)
+
+# print(dd)
 
 # item = [{'barang': 'komputer', 'jumlah': 50, 'harga': ''},
 #         {'barang': 'mouse', 'jumlah': '', 'harga': '200'},

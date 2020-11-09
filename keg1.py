@@ -10,11 +10,14 @@ epl = [{'klub': 'liverpool', 'posisi': 1, 'pelatih': 'klopp', 'gol': 17},
 #     team.pop('pelatih')
 #     print(team)
 
+dd = []
 for x in range(len(epl)):
     for k, v in epl[x].items():
         if k == 'posisi' or k == 'gol':
-            print(k + ' : ' + str(v))
-    print('-------------------------')
+            data = dict([(k,v)])
+            dd.append(data)
+
+print(dd)
 
 # no 2
 for x in range(len(epl)):
@@ -23,6 +26,7 @@ for x in range(len(epl)):
         # epl[x].popitem()
 
 del epl[1]
+
 for team in epl:
     print(team)
 
