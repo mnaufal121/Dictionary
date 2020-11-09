@@ -10,9 +10,9 @@ for s in std:
 
 # proses pengecekan data kosong + input user 
 for x in range(len(std)):
-    for k, v in std[x].items():
+    for k in std[x].keys():
         if std[x][k] == '':
-            n = input('masukkan value ' + k + ':')
+            n = input('Masukkan value ' + k + ':')
             n1 = {k : n}
             std[x].update(n1)
 

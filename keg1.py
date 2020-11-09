@@ -5,16 +5,26 @@ epl = [{'klub': 'liverpool', 'posisi': 1, 'pelatih': 'klopp', 'gol': 17},
        {'klub': 'burnley', 'posisi': 20, 'pelatih': 'dyche', 'gol': 3}]
 
 # no 1
-for team in epl:
-    team.pop('klub')
-    team.pop('pelatih')
-    print(team)
+# for team in epl:
+#     team.pop('klub')
+#     team.pop('pelatih')
+#     print(team)
+
+for x in range(len(epl)):
+    for k, v in epl[x].items():
+        if k == 'posisi' or k == 'gol':
+            print(k + ' : ' + str(v))
+    print('-------------------------')
 
 # no 2
 for x in range(len(epl)):
     if epl[x] == epl[1]:
         epl[x].clear()
-    print(epl[x])
+        # epl[x].popitem()
+
+del epl[1]
+for team in epl:
+    print(team)
 
 # no 3
 for team in epl:
@@ -31,7 +41,7 @@ epl.append(newteam)
 
 # no 5
 for team in epl:
-    chg = input('Ubah value key 4: ')
+    chg = input('Ubah value gol: ')
     # team['gol'] = chg
     ngol = {'gol': chg}
     team.update(ngol)
@@ -45,8 +55,11 @@ for team in epl:
     print('-------------------------')
 
 
-# no 7 + 8
+# # no 7 + 8
 # no 7
+for team in epl:
+    print(team)
+
 for x in range(len(epl)):
     if epl[x] == epl[0]:
         chg = input('ubah value key 2: ')
@@ -70,6 +83,7 @@ for team in epl:
     print("2. Posisi Klasemen :", team.get('posisi'))
     print("3. Nama Pelatih :", team.get('pelatih'))
     print("4. Jumlah Gol :", team.get('gol'))
+    print('-------------------------')
 
 # no 9 + 10
 valkey2 = 0
@@ -77,8 +91,8 @@ valkey4 = 0
 cc = []
 
 for team in epl:
-    valkey2 += team.get('posisi')
-    valkey4 += team.get('gol')
+    valkey2 += int(team.get('posisi'))
+    valkey4 += int(team.get('gol'))
     valkey1 = team.get('klub')
     valkey3 = team.get('pelatih')
     cc.append(valkey1 + valkey3) 
